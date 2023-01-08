@@ -13,11 +13,9 @@ struct ComponentsListView: View {
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(viewModel.components, id: \.name) { component in
-                        ComponentListRowView(menuOption: component)
-                }
-            }
+            List(viewModel.components) { component in
+                ComponentListRowView(menuOption: component)
+            }            
             .navigationTitle("Componentes")
             .onAppear(perform: {
                 viewModel.load()

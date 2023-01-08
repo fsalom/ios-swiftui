@@ -12,6 +12,7 @@ struct MenuSection {
     var options: [MenuOption]
 }
 
-struct MenuOption {
+struct MenuOption: Identifiable {
+    let id = UUID()
     var name: String
 }
