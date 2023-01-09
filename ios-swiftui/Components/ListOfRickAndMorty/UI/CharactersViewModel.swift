@@ -9,8 +9,7 @@ import Foundation
 import SwiftUI
 
 class CharacterListViewModel: ObservableObject {
-    @Published public var characters: [Character]?
-    public var placeholders = Array(repeating: Character(with: CharacterDTO(name: "---", image: "---")), count: 10)
+    @Published public var characters = [Character]()
 
     public var currentPage = 1 {
         didSet {
@@ -19,7 +18,7 @@ class CharacterListViewModel: ObservableObject {
     }
 
     public var shouldDisplayNextPage: Bool {
-        if characters?.isEmpty == false,
+        if characters.isEmpty == false,
            let totalPages = totalPage,
            currentPage < totalPages {
             return true
@@ -38,7 +37,7 @@ class CharacterListViewModel: ObservableObject {
 
     func fetchCharacters() {
         Task {
-            characters = try? await rickAndMortyUseCase.getCharacters()
+            characters = try await rickAndMortyUseCase.getCharacters()
         }
     }
 }

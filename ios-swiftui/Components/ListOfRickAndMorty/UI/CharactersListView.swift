@@ -11,19 +11,12 @@ struct CharactersListView: View {
     @StateObject private var viewModel = CharacterListViewModel()
 
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(viewModel.characters ?? viewModel.placeholders, id: \.name) { character in
-                        CharactersListRowView(character: character)
-                }
-                if viewModel.shouldDisplayNextPage {
-                    nextPageView
-                }
-            }
-            .navigationTitle("Characters")
-            .onAppear {
-                viewModel.fetchCharacters()
-            }
+        List(viewModel.characters) { character in
+            CharactersListRowView(character: character)
+        }
+        .navigationTitle("Characters")
+        .onAppear {
+            viewModel.fetchCharacters()
         }
     }
 

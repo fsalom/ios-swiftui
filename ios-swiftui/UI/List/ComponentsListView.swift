@@ -14,12 +14,13 @@ struct ComponentsListView: View {
     var body: some View {
         NavigationView {
             List(viewModel.components) { component in
-                ComponentListRowView(menuOption: component)
-            }            
-            .navigationTitle("Componentes")
+                NavigationLink(destination: CharactersListView()) {
+                    ComponentListRowView(menuOption: component)
+                }
+            }
             .onAppear(perform: {
                 viewModel.load()
-            })
+            }).navigationViewStyle(.stack)
         }
     }
 
