@@ -2,7 +2,6 @@
 //  Character.swift
 //  ios-swiftui
 //
-//  Created by Fernando Salom Carratala on 7/1/23.
 //
 
 import Foundation

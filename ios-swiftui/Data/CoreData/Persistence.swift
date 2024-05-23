@@ -2,7 +2,6 @@
 //  Persistence.swift
 //  ios-swiftui
 //
-//  Created by Fernando Salom Carratala on 5/1/23.
 //
 
 import CoreData

@@ -2,8 +2,6 @@
 //  Character.swift
 //  ios-swiftui
 //
-//  Created by Fernando Salom Carratala on 7/1/23.
-//
 
 import Foundation
 
@@ -23,7 +21,7 @@ final class RickAndMortyUseCase: RickAndMortyUseCaseProtocol {
         do {
             let page = 0
             let data = try await repository.getCharacters(for: page)
-            var characters = data.results.map { characterDTO in
+            let characters = data.results.map { characterDTO in
                 Character(with: characterDTO)
             }
             return characters

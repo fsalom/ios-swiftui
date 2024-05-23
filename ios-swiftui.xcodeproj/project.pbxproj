@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C16E18072973F9C200BD519D /* CharactersListStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E18042973F9C200BD519D /* CharactersListStyleView.swift */; };
 		C1BAF7652966F92400DCEE5A /* SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BAF7642966F92400DCEE5A /* SwiftUIApp.swift */; };
 		C1BAF7672966F92600DCEE5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1BAF7662966F92600DCEE5A /* Assets.xcassets */; };
 		C1BAF76A2966F92600DCEE5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1BAF7692966F92600DCEE5A /* Preview Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C16E18042973F9C200BD519D /* CharactersListStyleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersListStyleView.swift; sourceTree = "<group>"; };
 		C1BAF75F2966F92400DCEE5A /* ios-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1BAF7642966F92400DCEE5A /* SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIApp.swift; sourceTree = "<group>"; };
 		C1BAF7662966F92600DCEE5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +62,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C16E18022973F99900BD519D /* List */ = {
+			isa = PBXGroup;
+			children = (
+				C1FE8AEC29696E4F004DB2D2 /* CharactersListView.swift */,
+				C1FE8AEE29696E98004DB2D2 /* CharactersViewModel.swift */,
+				C1FE8AF029696F01004DB2D2 /* CharactersRowView.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		C16E18032973F9C200BD519D /* ListStyle */ = {
+			isa = PBXGroup;
+			children = (
+				C16E18042973F9C200BD519D /* CharactersListStyleView.swift */,
+			);
+			path = ListStyle;
+			sourceTree = "<group>";
+		};
 		C1BAF7562966F92400DCEE5A = {
 			isa = PBXGroup;
 			children = (
@@ -177,9 +197,8 @@
 		C1BF02A5296A17A9008FE367 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				C1FE8AEC29696E4F004DB2D2 /* CharactersListView.swift */,
-				C1FE8AEE29696E98004DB2D2 /* CharactersViewModel.swift */,
-				C1FE8AF029696F01004DB2D2 /* CharactersRowView.swift */,
+				C16E18032973F9C200BD519D /* ListStyle */,
+				C16E18022973F99900BD519D /* List */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -338,6 +357,7 @@
 				C1BF02AD296A22EC008FE367 /* ComponentsListView.swift in Sources */,
 				C1BF02A0296A1570008FE367 /* NetworkError.swift in Sources */,
 				C1FE8AF129696F01004DB2D2 /* CharactersRowView.swift in Sources */,
+				C16E18072973F9C200BD519D /* CharactersListStyleView.swift in Sources */,
 				C1BAF7652966F92400DCEE5A /* SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

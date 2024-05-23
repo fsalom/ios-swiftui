@@ -2,14 +2,12 @@
 //  CharactersList.swift
 //  ios-swiftui
 //
-//  Created by Fernando Salom Carratala on 7/1/23.
-//
 
 import SwiftUI
 
 struct CharactersListView: View {
     @StateObject private var viewModel = CharacterListViewModel()
-
+ 
     var body: some View {
         List(viewModel.characters) { character in
             CharactersListRowView(character: character)

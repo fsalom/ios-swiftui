@@ -2,7 +2,6 @@
 //  CharactersRowView.swift
 //  ios-swiftui
 //
-//  Created by Fernando Salom Carratala on 7/1/23.
 //
 
 import SwiftUI
@@ -12,8 +11,7 @@ struct CharactersListRowView: View {
 
     var body: some View {
         HStack {
-            if let image = character.image,
-               let url = URL(string: image) {
+            if let url = URL(string: character.image) {
                 AsyncImage(url: url) { image in
                         image
                             .resizable()
@@ -32,8 +30,7 @@ struct CharactersListRowView: View {
             VStack(alignment: .leading) {
                 Text(character.name)
                     .font(.title3)
-                    .foregroundColor(.accentColor)
-                    .redacted(reason: character.name == nil ? .placeholder : [])
+                    .foregroundColor(.black)
             }
         }
     }
